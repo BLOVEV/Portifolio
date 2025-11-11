@@ -1,27 +1,227 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&family=Poppins:wght@300;400;500;600&display=swap');
+
 :root {
-    --cor-principal: #960aa8;
-  --cor-secundaria: #a52dbd;
-  --cor-destaque: #b90de4;
+  --cor-principal: #9b002e;
+  --cor-secundaria: #b6133b;
+  --cor-destaque: #270002;
+  --cor-fundo: #fdfdfd;
+  --cor-texto: #1c1c1c;
 }
 
+/* ---------------------------- */
+/* BASE GERAL                   */
+/* ---------------------------- */
 body {
-  font-family: "Lora", Cambria;
+  font-family: "Poppins", sans-serif;
+  background: var(--cor-fundo);
+  color: var(--cor-texto);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
 }
 
+/* ---------------------------- */
+/* TÍTULOS                      */
+/* ---------------------------- */
 h1, h2, h5 {
-    color: var(--cor-secundaria);
-    font-weight: 700;
-}
-.lead, .btn-link {
-    color: var(--cor-destaque);
-    font-weight: 700;
+  font-family: "Zen Dots", sans-serif;
+  color: var(--cor-secundaria);
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
-a, .btn-link:hover {
-    color: var(--cor-principal)
+h1 {
+  font-size: 1.8rem;
 }
 
-a:hover{
-    color: var(--cor-destaque);
+h2 {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+/* ---------------------------- */
+/* CABEÇALHO                    */
+/* ---------------------------- */
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+  border-bottom: 2px solid var(--cor-principal);
+}
+
+header img {
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  border: 3px solid var(--cor-principal);
+  transition: transform 0.3s ease;
+}
+
+header img:hover {
+  transform: scale(1.05);
+}
+
+header p {
+  max-width: 600px;
+  margin: 0.4rem auto;
+  font-size: 0.95rem;
+  color: var(--cor-destaque);
+}
+
+.lead {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  color: var(--cor-principal);
+}
+
+/* BLOCO DE HABILIDADES (opção minimalista sólido) */
+.habilidades {
+  background-color: #fff0f3;
+  padding: 1rem;
+  border-radius: 8px;
+  display: inline-block;
+  margin-top: 1rem;
+  border: 1px solid var(--cor-principal);
+}
+
+.habilidades .badge {
+  background-color: var(--cor-principal);
+  color: white;
+  border: none;
+  font-weight: 500;
+  margin: 0.3rem;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  transition: background 0.3s ease;
+}
+
+.habilidades .badge:hover {
+  background-color: var(--cor-secundaria);
+}
+
+/* ---------------------------- */
+/* PROJETOS                     */
+/* ---------------------------- */
+main {
+  padding: 2rem 1rem;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 0;
+  background-color: white;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--cor-principal);
+  transform: translateY(-4px);
+}
+
+.card-img-top {
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-title {
+  font-family: "Zen Dots", sans-serif;
+  color: var(--cor-principal);
+}
+
+.card-text {
+  color: #444;
+  font-size: 0.9rem;
+}
+
+.btn-link {
+  color: var(--cor-secundaria);
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.5px;
+}
+
+.btn-link:hover {
+  color: var(--cor-principal);
+}
+
+/* ---------------------------- */
+/* MODAIS                       */
+/* ---------------------------- */
+.modal-content {
+  border-radius: 0;
+  border: 2px solid var(--cor-principal);
+}
+
+.modal-header {
+  background-color: var(--cor-principal);
+  color: white;
+  font-family: "Zen Dots", sans-serif;
+}
+
+.modal-footer a {
+  color: var(--cor-secundaria);
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.modal-footer a:hover {
+  color: var(--cor-principal);
+}
+
+/* ---------------------------- */
+/* RODAPÉ                       */
+/* ---------------------------- */
+footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border-top: 2px solid var(--cor-principal);
+  margin-top: 3rem;
+}
+
+footer h2 {
+  font-family: "Zen Dots", sans-serif;
+  color: var(--cor-secundaria);
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+footer a {
+  color: var(--cor-principal);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+footer a:hover {
+  color: var(--cor-destaque);
+}
+
+footer p {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* ---------------------------- */
+/* RESPONSIVIDADE               */
+/* ---------------------------- */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  header img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .card-img-top {
+    height: 150px;
+  }
 }
